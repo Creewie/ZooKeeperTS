@@ -1,0 +1,26 @@
+﻿[
+  {
+    "id": 1,
+    "name": "Rysio",
+    "species": "delfin",
+    "age": 6,
+    "isEndangered": true,
+    "habitat": "ocean"
+  },
+  {
+    "id": 2,
+    "name": "Franio",
+    "species": "lew",
+    "age": 9,
+    "isEndangered": false,
+    "habitat": "sawanna"
+  },
+  {
+    "id": 3,
+    "name": "Krzysio",
+    "species": "jelien",
+    "age": 18,
+    "isEndangered": true,
+    "habitat": "lasy"
+  }
+]
