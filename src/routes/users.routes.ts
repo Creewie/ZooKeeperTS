@@ -1,17 +1,15 @@
-﻿import express, { Request, Response } from 'express';
+﻿import express from "express";
 import AnimalsController from "../controllers/AnimalsController";
 
-const userRouter = express.Router();
+const animalsRouter = express.Router();
 
-userRouter.get('/',(req,res)=>{
-    res.send("Następne strony:<br> " +
-        "<a href='http://localhost:3000/animals'>Wszystkie zwierzęta</a><br>")
-})
-userRouter.get("/animals", AnimalsController.getAllAnimals)
-userRouter.get("/animals/endangered/", AnimalsController.getEndangeredAnimals)
-userRouter.get("/animals/habitat/:habitat", AnimalsController.getAnimalsByHabitat)
-userRouter.get("/animals/species/:species", AnimalsController.getAnimalsBySpieces)
-userRouter.post("/animals", AnimalsController.addAnimal)
-userRouter.put("/animals/:id", AnimalsController.updateAnimal)
-userRouter.delete("/animals/:id", AnimalsController.deleteAnimal)
-userRouter.get("/animals/:id", AnimalsController.getAnimalsById)
+animalsRouter.get("/animals", AnimalsController.getAllAnimals);
+animalsRouter.get("/animals/endangered", AnimalsController.getEndangeredAnimals);
+animalsRouter.get("/animals/habitat/:habitat", AnimalsController.getAnimalsByHabitat);
+animalsRouter.get("/animals/species/:species", AnimalsController.getAnimalsBySpieces);
+animalsRouter.post("/animals", AnimalsController.addAnimal);
+animalsRouter.put("/animals/:id", AnimalsController.updateAnimal);
+animalsRouter.delete("/animals/:id", AnimalsController.deleteAnimal);
+animalsRouter.get("/animals/:id", AnimalsController.getAnimalsById);
+
+export default animalsRouter;

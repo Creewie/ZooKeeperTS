@@ -1,6 +1,6 @@
 ﻿import { promises as fs } from 'fs'
 import path from 'path'
-const filePath = path.resolve("data", "zoo.json")
+const filePath = path.resolve(__dirname, "../data/zoo.json");
 import {Animal} from "../models/Animal"
 
 class AnimalsService {
@@ -67,7 +67,7 @@ class AnimalsService {
             }
         }
     }
-    addAnimal = async (animal: Animal) => {
+        addAnimal = async (animal: Animal) => {
         const animals = await this.getAllAnimals()
         const newAnimal = {
             ...animal,
